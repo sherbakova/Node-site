@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes');
 var users = require('./routes/user');
+var video = require ('./routes/video');
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use(app.router);
 
 app.get('/', routes.index);
 app.get('/users', users.list);
+app.get('/video', video.index);
 app.get('/:id', routes.index);
 
 /// catch 404 and forwarding to error handler

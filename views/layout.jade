@@ -1,11 +1,51 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset='utf8')
+    title  BestBook
+    meta(name='description', content='')
+    meta(name='keywords', content=' ')
+    link(href='media/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    link(href='media/css/style.css', rel='stylesheet')
+    script(src='media/js/jquery-1.12.2.min.js')
+    script(src='media/js/my.js')
   body
-   div.menu
-    a(href='/') Главная
-    a(href='/contact') Контакты
-    a(href='/about') O нас
-   block content
+    header#header
+      img(src='media/img/log.jpg')
+      h1#logotext BestBook
+      h1#logotext2 Любимые книги по самым низким ценам:)
+    .topmenu
+      a(href='#', data-url='media/img/fon1.jpg') Главная
+      a(href='#', data-url='media/img/fon2.jpg') Книги
+      a(href='#', data-url='media/img/fon3.jpg') Акции
+      a(href='#', data-url='media/img/fon4.jpg') Доставка
+      a(href='#', data-url='media/img/fon5.jpg') Контакты
+    .bordur(<='', div='')
+      .bordur2(<='', div='')
+        div
+          .col-md-2.leftmenu
+            a.btn.btn-success.btn-block(href='#', data-title='Новинки', data-body='<p>test text</p>') Новинки
+            a.btn.btn-success.btn-block(href='#', data-title='Детская литература') Детская литература
+            a.btn.btn-success.btn-block(href='#', data-title='Бизнес-литература') Бизнес-литература 
+            a.btn.btn-success.btn-block(href='#', data-title='Non-fiction')  Non-fiction 
+            a.btn.btn-success.btn-block(href='#', data-title='Бестселлеры') Бестселлеры
+          .col-md-8
+            block content
+          br(style='clear:both')
+          .col-md-4
+            .banner1
+          .col-md-4
+            .banner2
+          .col-md-4
+            .banner3
+          .block1
+            p.a1 Контакты
+            ul.b1
+              li Телефоны:
+              ul +375291903099 Velcom
+              ul +315295682233 МТС 
+              li Email: pavlovich.k.o@gmail.com
+              li Адресс: пл. Якуба Коласа, 16/9
+          footer#footer
+            a(href='http/ссылка на сайт', target='_blank') 	Разработка сайтов 
+            | 					My Site

@@ -134,7 +134,51 @@ color: brown;
 	color: brown;
 	padding: 0 10px 0 30px;
 	font-style:oblique;	
-	}		
+	}	
+#player{
+	width: 730px;
+	margin:20px auto;
+	padding: 10px 5px 5px 5px;
+	background: #999;
+	border: solid 1px block;
+	border-radius: 6px;
+}
+#play, #mute{
+	padding: 2px 10px;
+	width: 65px;
+	border: solid 1px green;
+	background: #ddd;
+	font-weight: bold;
+	border-radius: 6px;
+}
+#bar{
+	float: left;
+	width: 400px;
+	height: 16px;
+	margin: 2px 5px;
+	border: 1px solid #ccc;
+	background: #eee;
+	
+	
+	}
+#button{
+	float: left;
+	width: 135px;
+	height: 15px;
+	padding-left: 5px;
+		}
+#progress{
+	width: 0;
+	height: 16px;
+	background: red;
+}
+.clear {
+	clear: both;
+	}
+#control{
+	width: 165px;
+	float: left;
+}	
 		
 		
 		

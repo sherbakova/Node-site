@@ -9,6 +9,8 @@ html
     link(href='media/css/style.css', rel='stylesheet')
     script(src='media/js/jquery-1.12.2.min.js')
     script(src='media/js/my.js')
+    block scripts
+    block styles
   body
     header#header
       img(src='media/img/log.jpg')
@@ -23,14 +25,14 @@ html
     .bordur(<='', div='')
       .bordur2(<='', div='')
         div
-          .col-md-2.leftmenu
+          .col-md-2.leftmenu#leftblock
             a.btn.btn-success.btn-block(href='#', data-title='Новинки', data-body='<p>test text</p>') Новинки
             a.btn.btn-success.btn-block(href='#', data-title='Детская литература') Детская литература
             a.btn.btn-success.btn-block(href='#', data-title='Бизнес-литература') Бизнес-литература 
             a.btn.btn-success.btn-block(href='#', data-title='Non-fiction')  Non-fiction 
-            a.btn.btn-success.btn-block(href='#', data-title='Бестселлеры') Бестселлеры
+            a.btn.btn-success.btn-block(href='#', data-title='Бестселлеры') Бестселлеры             
           .col-md-8
-            block content
+             block content
           br(style='clear:both')
           .col-md-4
             .banner1

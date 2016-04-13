@@ -1,0 +1,16 @@
+extends layout
+block scripts
+    script(src='media/js/form_api.js')
+block styles
+    
+block content
+  h2 Anketa
+  section
+   form(name='anketa', method='post', action='/anketa')
+    label(for='firstname')  Имя 
+    input(type='text', name='firstname', id='firstname')
+    label(for='lastname')  Фамилия 
+    input(type='text', name='lastname', id='lastname')
+    label(for='email') Email
+    input#email(type='email', name='' required='')
+    input(type='submit', value='Отправить')

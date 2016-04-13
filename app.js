@@ -6,9 +6,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes');
+var routes = require('./routes');/*сюда записываем переменные*/
 var users = require('./routes/user');
 var video = require ('./routes/video');
+var anketa = require ('./routes/anketa');
 
 var app = express();
 
@@ -27,7 +28,9 @@ app.use(app.router);
 app.get('/', routes.index);
 app.get('/users', users.list);
 app.get('/video', video.index);
-app.get('/:id', routes.index);
+app.get('/anketa', anketa.index);
+app.get('/:id', routes.index); /*всегда последний*/
+
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

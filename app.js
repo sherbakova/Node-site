@@ -10,6 +10,7 @@ var routes = require('./routes');/*сюда записываем перемен�
 var users = require('./routes/user');
 var video = require ('./routes/video');
 var anketa = require ('./routes/anketa');
+var canvas = require ('./routes/canvas');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.get('/', routes.index);
 app.get('/users', users.list);
 app.get('/video', video.index);
 app.get('/anketa', anketa.index);
+app.get('/canvas', canvas.index);
 app.get('/:id', routes.index); /*всегда последний*/
 
 

@@ -185,6 +185,16 @@ color: brown;
 	border: solid 1px grey;
 	background: white;
 }
+#drawbox{
+	height: 290px;
+	width: 300px;
+	float: right;
+	margin: 10px;
+	padding: 10px;
+	border: solid 1px black;
+	box-shadow: 1px 1px 1px black;
+	background: white;
+}
 		
 		
 		

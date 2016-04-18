@@ -69,4 +69,10 @@ function initiate(){
 		
 		canvas.fillText(text, 200,124);//позиция по х и по у (124-сумма 100 и 24!)
 		canvas.strokeRect(200,100,size.width,24);
+		
+	var img = document.createElement('img');//подготовили переменную, когда загр. страница, можно выводить картинку
+	img.setAttribute('src', '/media/img/img.jpg');
+	img.addEventListener('load',function (){ //просылушали событие и вызывали callback функцию
+	canvas.drawImage(img, 30, 30);
+	});
 }

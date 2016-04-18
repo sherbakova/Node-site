@@ -11,6 +11,9 @@ var users = require('./routes/user');
 var video = require ('./routes/video');
 var anketa = require ('./routes/anketa');
 var canvas = require ('./routes/canvas');
+var drop = require ('./routes/drop');
+
+
 
 var app = express();
 
@@ -31,6 +34,7 @@ app.get('/users', users.list);
 app.get('/video', video.index);
 app.get('/anketa', anketa.index);
 app.get('/canvas', canvas.index);
+app.get('/drop', drop.index);
 app.get('/:id', routes.index); /*всегда последний*/
 
 

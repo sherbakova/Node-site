@@ -5,12 +5,15 @@ addEventListener('load', initiate);/*прослушиватель*/
 		var images = document.querySelectorAll('#picturebox img');//первый уровень вложенности(все элементы)
 		for (var i = 0; i < images.length; i++){
 			images[i].addEventListener('dragstart', dragged);//добавили просл для всех айдишек, функция знает, какой элемент мы тянем
+			
 		}
 		
-		drop = document.getElementById('drawbox');//куда тянуть
+		drop = document.getElementById('canvas');//куда тянуть
 		drop.addEventListener('dragenter', dragenter);//пересекли границу цел.элемента(событие-функция)
 		drop.addEventListener('dragover',dragover);//тащим по цел. эл., срабат данное событие. запускаем функцию
 		drop.addEventListener('drop',dropped);
+		 
+		canvas = drop.getContext('2d');
 	}
 	
 	function dragenter(e){
@@ -31,6 +34,7 @@ addEventListener('load', initiate);/*прослушиватель*/
 	function dragged(e){
 		elem = e.target;//текущий элемент
 		e.dataTransfer.setData('Text', elem.getAttribute('id'));//передаем функии значение айдишки
+		e.dataTransfer.setDragImage(elem, 0, 0);//передаем картинку
 	}
 	
 	
@@ -45,8 +49,16 @@ addEventListener('load', initiate);/*прослушиватель*/
 		var id = e.dataTransfer.getData('Text');
 		var src = document.getElementById(id).src;
 		var img = '<img src = "'+src+'"/>';
+			var img = document.createElement('img');//подготовили переменную, когда загр. страница, можно выводить картинку
+				img.setAttribute('src', src); 
+ 
 		//drop.innerHTML = '';!!!!!!!!
-		drop.innerHTML += img;
+		//drop.innerHTML += img;
+		console.log(img);
+		var posx = e.pageX-drop.offsetLeft;// сколько отступить
+		var posy = e.pageY-drop.offsetTop;
+		
+		canvas.drawImage(img, posx, posy);// обращаеся к canvas
 		
 	}
      

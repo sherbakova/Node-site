@@ -73,6 +73,7 @@ function initiate(){
 	var img = document.createElement('img');//подготовили переменную, когда загр. страница, можно выводить картинку
 	img.setAttribute('src', '/media/img/img.jpg');
 	img.addEventListener('load',function (){ //просылушали событие и вызывали callback функцию
+	console.log(img);
 	canvas.drawImage(img, 30, 30);
 	});
 }

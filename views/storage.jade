@@ -1,0 +1,20 @@
+extends layout
+block scripts
+    script(src='media/js/storage_api.js')
+
+block content
+ section#formbox
+  form(name='form')
+   label(for='keyword') Ключ
+    br
+    input#keyword(type='text', name='keyword')
+    br
+    label(for='text') Значение
+    br
+    textarea#text(name='text')
+    br
+    input#save(type='button', value='save')
+ section#databox
+  | Нет данных
+
+    

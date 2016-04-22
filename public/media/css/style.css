@@ -196,7 +196,25 @@ color: brown;
 .col-md-8{
 	position:static;
 }
-		
+#formbox{
+	float: left;
+	padding: 20px;
+	border: solid 1px #999;
+}
+#databox{
+	float: left;
+	width: 400px;
+	margin-left: 20px;
+	padding: 20px;
+	border: solid 1px #999;
+}
+#keyword, #text{
+	width: 200px;
+}
+#databox >div{
+	padding: 5px;
+	border-bottom: 1px, solid #999;
+}
 		
 		
 		

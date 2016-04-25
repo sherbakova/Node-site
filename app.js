@@ -5,7 +5,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var config = require ('./config');
 var routes = require('./routes');/*сюда записываем переменные*/
 var users = require('./routes/user');
 var video = require ('./routes/video');
@@ -14,6 +14,7 @@ var canvas = require ('./routes/canvas');
 var drop = require ('./routes/drop');
 var map = require ('./routes/map');
 var storage = require ('./routes/storage');
+
 
 
 
@@ -71,5 +72,5 @@ app.use(function(err, req, res, next) {
     });
 });
 
-app.listen(8123);
+app.listen(config.get('port'));
 module.exports = app;

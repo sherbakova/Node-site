@@ -14,6 +14,7 @@ var canvas = require ('./routes/canvas');
 var drop = require ('./routes/drop');
 var map = require ('./routes/map');
 var storage = require ('./routes/storage');
+var add = require ('./routes/add');
 
 
 
@@ -41,6 +42,7 @@ app.get('/drop', drop.index);
 app.get('/map', map.index);
 app.get('/storage', storage.index);
 app.get('/:id', routes.index); /*всегда последний*/
+app.get('/:id/add', add.index);//тут есть id
 
 
 /// catch 404 and forwarding to error handler

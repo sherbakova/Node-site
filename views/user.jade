@@ -1,0 +1,15 @@
+extends layout
+block scripts
+    script(src='media/js/user_api.js')
+block content
+ section
+  div(style'color:red')=err
+  form(name='users', method='post', action='/users')
+   div.form-group
+    label(for='email') Email
+    input#email.form-control(type='email', name='email' required='')
+   div.form-group
+    label(for='password') Password
+    input#password.form-control(type='password', name='password' required='')
+   input(type='submit', value='Save', class='btn btn-success')
+    

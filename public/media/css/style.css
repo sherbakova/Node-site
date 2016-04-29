@@ -215,6 +215,20 @@ color: brown;
 	padding: 5px;
 	border-bottom: 1px, solid #999;
 }
+#password {
+	box-shadow: 1px 1px 1px black;
+	background: white;
+	width: 200px;
+	height: 30px;
+	display
+	
+}
+#email{
+	box-shadow: 1px 1px 1px black;
+	background: white;
+	width: 200px;
+	height: 30px;
+}
 		
 		
 		

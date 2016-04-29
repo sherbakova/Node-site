@@ -13,7 +13,8 @@ exports.index = function(req, res){
 				body: 'Текст'
 			}
 		}
-		  res.render('index', { title: text });
+		console.log(text.name);
+		  res.render('index', { text: text });
 	})
 
 };

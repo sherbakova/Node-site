@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var config = require ('./config');
 var routes = require('./routes');/*сюда записываем переменные*/
-var users = require('./routes/user');
+var users = require('./routes/user');// подключение файла
 var video = require ('./routes/video');
 var anketa = require ('./routes/anketa');
 var canvas = require ('./routes/canvas');
@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
 
 app.get('/', routes.index);
-app.get('/users', users.list);
+app.get('/users', users.index);//вызываем переменную индех из файла роутес/юзерс
 app.get('/video', video.index);
 app.get('/anketa', anketa.index);
 app.get('/canvas', canvas.index);
@@ -43,6 +43,7 @@ app.get('/map', map.index);
 app.get('/storage', storage.index);
 app.get('/:id', routes.index); /*всегда последний*/
 app.get('/:id/add', add.index);//тут есть id
+app.post('/users', users.add);//вызываем переменную эд из файла роутес/юзерс
 
 
 /// catch 404 and forwarding to error handler
